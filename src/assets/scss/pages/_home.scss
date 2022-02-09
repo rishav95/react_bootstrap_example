@@ -1,0 +1,32 @@
+@import "../abstracts/_variables.scss";
+
+.p-home {
+  background-color: $theme-color;
+}
+
+.c-contact {
+  &__form {
+    margin: auto;
+    width: 10rem;
+  }
+}
+
+.c-grid {
+  &__header { grid-area: header; }
+  &__menu { grid-area: menu; }
+  &__main { grid-area: main; }
+  &__right { grid-area: right; }
+  &__footer { grid-area: footer; }
+
+  .grid-item {
+    border: 1px solid;
+  }
+
+  display: grid;
+  grid-template-areas:
+    '. header header '
+    'menu main right'
+    'menu footer footer';
+  grid-gap: 1rem;
+  padding: 1rem;
+}
