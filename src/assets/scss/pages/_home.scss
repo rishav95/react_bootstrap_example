@@ -2,6 +2,12 @@
 
 .p-home {
   background-color: $theme-color;
+
+  &__toolbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .c-contact {
