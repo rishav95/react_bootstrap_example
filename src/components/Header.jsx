@@ -4,7 +4,7 @@ import useAuth from '../contexts/Auth';
 
 function Header() {
   const { user, signin, signout } = useAuth();
-  const { navigate } = useNavigate();
+  const navigate = useNavigate();
 
   const toggleLogin = () => {
     if(!!user) {
@@ -29,7 +29,7 @@ function Header() {
           <Link to="posts">Posts</Link>
 
           <button className={!!user ? "btn-danger" : "btn-primary"} onClick={toggleLogin}>{!!user ? "Logout" : "Login"}</button>
-          <button onClick={() => {
+          <button className="btn btn-secondary" onClick={() => {
             // doSomething
             navigate('/posts')
           }}>programatically redirect</button>
