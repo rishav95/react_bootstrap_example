@@ -1,4 +1,4 @@
-@import "../abstracts/_variables.scss";
+@use "../abstracts/_variables.scss" as *;
 
 .p-home {
   background-color: $theme-color;
